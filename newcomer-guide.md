@@ -62,8 +62,8 @@
 1. 在GitHub进入你要克隆的仓库，点击右上角code按钮 ![跳转页面](GitHub/code.png)
 2. 点击复制按钮，复制仓库的url ![跳转页面](GitHub/url.png )
 3. 打开vscode，首次使用先在终端配置Git 用户名和邮箱，之后可在vs中无缝使用Git功能，执行命令
-	* - `git config --global user.email "你的邮箱"`（配置 Git 全局用户邮箱 ）
-	* - `git config --global user.name "Lynn-creator-source"`（配置 Git 全局用户名 ）
+	* ```git config --global user.email "你的邮箱"（配置 Git 全局用户邮箱 ）```
+	* ```git config --global user.name "Lynn-creator-source"`（配置 Git 全局用户名 ）```
 4. 打开你想要存放项目的地址
 	* ```cd 你想要存放仓库的本地文件夹地址  #基于命令行窗口操作```
 	* ```git clone 你复制的仓库的url地址 #基于命令行窗口的操作```
