@@ -108,22 +108,22 @@
 	* 代码审核：仓库维护者可以在 PR 中查看你的修改内容、提出意见、讨论问题，确保代码质量
 	* 协作记录：PR 会完整记录修改过程和讨论，方便后续追溯
 1. **创建拉取请求**：
-    - 进入 GitHub 仓库页面，点击 “Pull requests” 标签，然后点击 “New pull request” 按钮。
-    - 在 “Compare” 下拉菜单中，选择要合并到的基础分支（通常是`main`分支），在 “Against” 下拉菜单中，选择要合并的比较分支（即你开发新功能或进行修改的分支）。
-    - 查看两个分支间的差异，确认无误后，点击 “Create pull request” 按钮，输入标题和描述，再次点击 “Create pull request” 按钮。
+    - 进入 GitHub 仓库页面，点击 “Pull requests” 标签，然后点击 “New pull request” 按钮
+    - 在 “Compare” 下拉菜单中，选择要合并到的基础分支（通常是`main`分支），在 “Against” 下拉菜单中，选择要合并的比较分支（即你开发新功能或进行修改的分支）
+    - 查看两个分支间的差异，确认无误后，点击 “Create pull request” 按钮，输入标题和描述，再次点击 “Create pull request” 按钮
 2. **代码审查**：
-    - 其他团队成员可以在拉取请求页面上审查代码，并提出意见或建议。你可以根据反馈进行修改，修改后推送更改，PR 会自动更新。
+    - 其他团队成员可以在拉取请求页面上审查代码，并提出意见或建议。你可以根据反馈进行修改，修改后推送更改，PR 会自动更新
 3. **解决冲突（如果有）**：
-    - 如果存在合并冲突，GitHub 会在 PR 页面显示冲突文件。你需要将冲突文件下载到本地，手动解决冲突后，提交更改并推送到 GitHub。
+    - 如果存在合并冲突，GitHub 会在 PR 页面显示冲突文件。你需要将冲突文件下载到本地，手动解决冲突后，提交更改并推送到 GitHub
 4. **合并拉取请求**：
     - 一旦得到审查批准，并解决了所有冲突，点击 “Merge pull request” 按钮。
     - 如果 “Merge pull request” 按钮不可见，可能是因为仓库设置了一些合并限制，比如需要通过某些状态检查。这种情况下，你可以点击 “Merge” 下拉菜单，根据需要选择 “Create a merge commit”“Squash and merge” 或 “Rebase and merge” 进行合并。
-    - 点击 “Confirm merge” 完成合并。
+    - 点击 “Confirm merge” 完成合并
 ###### 操作过程
 1. 登录Github账号，打开自己fork的仓库页面 
 2. 页面会提示"刚刚推送了新分支"，点击旁边的Compare & pull request 按钮（若未显示，可先点击 `Pull requests` 标签页，再点击 `New pull request`）
 3. 设置pr目标（重点）
-	* - 基础仓库（base repository）：选择团队主仓库（如 `团队名/项目名`）
+	*  基础仓库（base repository）：选择团队主仓库（如 `团队名/项目名`）
 	- 基础分支（base）：选择要合并到团队仓库的目标分支（如 `main`）
 	- 比较仓库（head repository）：选择你的 fork 仓库（如 `你的用户名/项目名`）
 	- 比较分支（compare）：选择你推送修改的分支（如 `feature/team-collab`）
@@ -135,8 +135,8 @@
  1.  团队成员审核代码
 	- 被指定的审核人会收到通知，在 PR 页面查看你的代码改动（`Files changed` 标签页）
 	- 审核人可能会：
-	    - 直接批准（`Approved`）
-	    - 提出修改建议（`Request changes`），并在代码旁添加评论（点击具体代码行的 `+` 号）
+		- 直接批准（Approved）
+	    - 提出修改建议（Request changes），并在代码旁添加评论（点击具体代码行的 + 号）
 2. 根据反馈修改代码
 	* 若需要修改，你可以在本地修改后，再次通过 git add → git commit → git push 推送到同一个分支，PR 会自动更新
 	* 通知审核人再次查看（可在 PR 评论区留言：“已修改，请再次审核”）
@@ -144,13 +144,13 @@
 	- 若 PR 页面显示 `This branch has conflicts that must be resolved`，说明你的分支与团队主分支有冲突。
 	- 解决步骤：
 		- （1）本地拉取团队主分支的最新代码：
-			* ```git remote add upstream 项目url  #添加团队主仓库为远程仓库（首次操作）
+			* ``` git remote add upstream 项目URL #添加团队主仓库为远程仓库（首次操作）```
 			* ```git fetch upstream```
 			* ```git checkout main```
 			* ```git merge upstream/main #将团队主分支同步到本地main```
 		* （2） 切换到你的分支，合并本地 main 分支解决冲突：
 			*  ```git checkout feather/team-collab```
-			* ```git merge main # 此时会提示冲突文件 
+			*  ```git merge main #此时会提示冲突文件``` 
 		* （3）打开冲突文件，手动解决冲突（删除 `<<<<<<<` `=======` `>>>>>>>` 等标记，保留正确代码）
 		* （4）提交并推送解决冲突后的代码：
 			* ```git add .```
